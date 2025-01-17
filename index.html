@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NASA Fun Facts</h1>
+        <button id="generateFact">Show a Fun Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "NASA was born on July 29, 1958, making it a Leo!",
+            "Before NASA, there was NACA, which sounds like a superhero sidekick.",
+            "The Apollo program took humans to the Moon, making it the ultimate road trip.",
+            "Project Mercury was NASA's first human spaceflight program, and it was out of this world!",
+            "The Space Shuttle program ran for 30 years, proving that space travel never goes out of style.",
+            "Perseverance, NASA's Mars Rover, is like a robotic explorer with a heart of gold.",
+            "The Hubble Space Telescope has been the universe's paparazzi since 1990.",
+            "NASA's Artemis program is planning a lunar comeback tour in the mid-2020s.",
+            "The International Space Station is like a floating United Nations in space.",
+            "Voyager 1 and 2 are the ultimate space tourists, now exploring interstellar space.",
+            "The James Webb Space Telescope is Hubble's cooler, younger sibling.",
+            "NASA's Earth Observing System is like a weather app on steroids.",
+            "New Horizons gave Pluto its first close-up in 2015, making it a cosmic celebrity.",
+            "Curiosity has been roving Mars since 2012, making it the planet's longest visitor.",
+            "Kepler discovered thousands of exoplanets, proving we're not alone in the universe.",
+            "NASA's Commercial Crew Program is like Uber for astronauts.",
+            "The Space Launch System is NASA's next-gen heavy-lift rocket, ready to lift off!",
+            "Juno is studying Jupiter, the solar system's biggest gas giant.",
+            "Parker Solar Probe is the Sun's closest fan, getting up close and personal.",
+            "NASA's Astrobiology Program is on the hunt for ET.",
+            "Chandra X-ray Observatory is like a cosmic detective, solving space mysteries.",
+            "The Lunar Reconnaissance Orbiter is mapping the Moon, one crater at a time.",
+            "NASA's Deep Space Network is the ultimate long-distance communicator.",
+            "Jet Propulsion Laboratory (JPL) is where robots get their marching orders.",
+            "Ames Research Center is where aeronautics meets space magic.",
+            "Langley Research Center is NASA's oldest field center, with a rich history.",
+            "Glenn Research Center is all about propulsion, making things go zoom!",
+            "Goddard Space Flight Center is the hub for Earth science and astrophysics.",
+            "Kennedy Space Center is the launchpad for human space adventures.",
+            "Johnson Space Center is where astronauts train to become space heroes."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
